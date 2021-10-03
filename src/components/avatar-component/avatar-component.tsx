@@ -29,7 +29,7 @@ export class AvatarComponent {
   @Prop() className: string;
 
   /**
-   * Custom class for the image
+   * Show title of the image on hover
    * @type {string}
    * @memberof AvatarComponent
    */
@@ -56,7 +56,7 @@ export class AvatarComponent {
       this.src || (!this.src && !this.alt) ? (
         <img class={className} src={this.src ?? 'assets/img/user_fallback_img.svg'} alt={this.alt} title={this.title} />
       ) : (
-        <div class={`${className} initial-text default-color`} title={this.title}>
+        <div class={`${className} initials-text default-color`} title={this.title}>
           {this.alt[0].toUpperCase()}
         </div>
       );
